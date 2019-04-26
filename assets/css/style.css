@@ -2173,3 +2173,8 @@ END TimeLine
 #screenshot h2:after{
     background-color: #FFFFFF !important;
 }
+
+.single-screen {
+    height: 400px;
+    width: 400px;
+}
