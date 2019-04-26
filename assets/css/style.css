@@ -2175,6 +2175,11 @@ END TimeLine
 }
 
 .single-screen {
-    height: 400px;
-    width: 400px;
+    height: 312px;
+    width: 636px;
 }
+
+.owl-item.active {
+    width: 636px !important;
+}
+
