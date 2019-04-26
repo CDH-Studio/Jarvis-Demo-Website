@@ -673,6 +673,7 @@ END Achivement Area
 
 .screen-area {
     position: relative;
+    background-color: #055b8d;
 }
 
 .screen-area img.screen-img {
@@ -697,7 +698,7 @@ END Achivement Area
 .screen-slider .owl-dots .owl-dot {
     height: 15px;
     width: 15px;
-    border: 1px solid #055482;
+    border: 1px solid #ffffff;
     border-radius: 50%;
     display: inline-block;
     margin: 0px 2px;
@@ -707,7 +708,7 @@ END Achivement Area
 }
 
 .screen-slider .owl-dots .active {
-    background-color: #055482;
+    background-color: #ffffff;
 }
 
 
@@ -2162,5 +2163,13 @@ END TimeLine
 }
 
 #timeline h2:after{
+    background-color: #FFFFFF !important;
+}
+
+#screenshot h2:before{
+    background-color: #FFFFFF !important;
+}
+
+#screenshot h2:after{
     background-color: #FFFFFF !important;
 }
