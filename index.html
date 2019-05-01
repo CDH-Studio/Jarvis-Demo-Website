@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/typography.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- <link rel="stylesheet" href="assets/css/animate.css"> -->
     <!--[if IE]>
     <style>
         .header-area {
@@ -63,23 +64,35 @@
                             <div class="main-menu">
                                 <nav class="nav-menu">
                                     <ul>
-                                        <li class="active"><a href="#home">
-                                            <span class="en">Home</span>
-                                        </a></li>
-                                        <li><a href="#feature">
-                                            <span class="en">Features</span>
-                                        </a></li>
-                                        <li><a href="#screenshot">
-                                            <span class="en">Screenshots</span>
+                                        <li class="active">
+                                            <a href="#home">
+                                                <span class="en">Home</span>
+                                            </a>
                                         </li>
-                                        <li><a href="#timeline">
-                                            <span class="en">Timeline</span>
+                                        <li>
+                                            <a href="#feature">
+                                                <span class="en">Features</span>
+                                            </a>
                                         </li>
-                                        <li><a href="#team">
-                                            <span class="en">Team</span>
+                                        <li>
+                                            <a href="#screenshot">
+                                                <span class="en">Screenshots</span>
+                                            </a>
                                         </li>
-                                        <li><a href="#contact">
-                                            <span class="en">Contact</span>
+                                        <li>
+                                            <a href="#timeline">
+                                                <span class="en">Timeline</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#team">
+                                                <span class="en">Team</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#contact">
+                                                <span class="en">Contact</span>
+                                            </a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -286,28 +299,79 @@
                     <span class="en">Screenshots</span>
                 </h2>
             </div>
-            <div class="screen-slider owl-carousel">
-                <div class="single-screen">
-                    <img src="assets/img/app/screen-slider/screen1.png" alt="mobile screen">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="assets/img/app/screen-slider/screen1.png" style="width:100%; max-height: 488px">
                 </div>
-                <div class="single-screen">
-                    <img src="assets/img/app/screen-slider/screen2.png" alt="mobile screen">
+                
+                <div class="mySlides fade">
+                    <img src="assets/img/app/screen-slider/screen2.png" style="width:100%">
                 </div>
-                <div class="single-screen">
-                    <img src="assets/img/app/screen-slider/screen3.png" alt="mobile screen">
+                
+                <div class="mySlides fade">
+                    <img src="assets/img/app/screen-slider/screen3.png" style="width:100%">
                 </div>
-                <div class="single-screen">
-                    <img src="assets/img/app/screen-slider/screen4.png" alt="mobile screen">
+                <div class="mySlides fade">
+                    <img src="assets/img/app/screen-slider/screen4.png" style="width:100%">
                 </div>
-                <div class="single-screen">
-                    <img src="assets/img/app/screen-slider/screen5.png" alt="mobile screen">
+                
+                <div class="mySlides fade">
+                    <img src="assets/img/app/screen-slider/screen5.png" style="width:100%">
                 </div>
-                <div class="single-screen">
-                    <img src="assets/img/app/screen-slider/screen6.png" alt="mobile screen">
+                
+                <div class="mySlides fade">
+                    <img src="assets/img/app/screen-slider/screen6.png" style="width:100%">
                 </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+                <span class="dot" onclick="currentSlide(6)"></span> 
             </div>
         </div>
     </section>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            }    
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
     <!-- screen slider area end -->
     
     <!-- technologies area start -->
