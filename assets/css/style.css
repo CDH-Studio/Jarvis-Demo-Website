@@ -620,7 +620,6 @@ END Feature Area
 
 .achivement-area {
     position: relative;
-    background: url(../img/bg/ach-bg-img.jpg) center center/cover no-repeat;
 }
 
 .achivement-area:before {
@@ -809,7 +808,6 @@ END Testimonial Area
 .video-area {
 	text-align: center;
     position: relative;
-    background: url(../img/bg/ach-bg-img.jpg) center center/cover no-repeat;
 }
 
 .video-area:before {
@@ -1023,7 +1021,6 @@ END Pricing Area
 .call-to-action {
     position: relative;
     z-index: 1;
-    background: url(../img/bg/ach-bg-img.jpg) center center/cover no-repeat;
 }
 
 .call-to-action:before {
