@@ -2246,3 +2246,65 @@ END TimeLine
     .prev, .next,.text {font-size: 11px}
   }
 
+  /* flip cards */
+  .flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 200px;
+    /* border: 1px solid #f1f1f1; */
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    /* background-color: #bbb; */
+    color: black;
+    overflow: hidden;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    color: #666666;
+    font-family: 'Poppins', sans-serif;
+    transform: rotateY(180deg);
+    padding: 20px 5px 0 5px;
+  }
+
+  .tech-title {
+    color: #232323 !important;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .tech-img {
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+  }
