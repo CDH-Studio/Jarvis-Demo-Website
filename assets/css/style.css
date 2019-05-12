@@ -152,7 +152,7 @@ textarea {
 .header-area.scrolled {
     transition: box-shadow 400ms linear;
     transition: background-color 400ms linear;
-    background-color: #06679f;
+    background-color: #023D6E;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
